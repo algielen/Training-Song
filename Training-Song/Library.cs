@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Training_Songs
+namespace Training_Song
 {
     internal class Library
     {
@@ -14,6 +14,12 @@ namespace Training_Songs
         public Library AddItem(IItem item)
         {
             Items.Add(item);
+            return this;
+        }
+
+        public Library RemoveItem(IItem item)
+        {
+            Items.Remove(item);
             return this;
         }
     }

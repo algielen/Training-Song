@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Training_Songs
+namespace Training_Song
 {
     internal class Artist
     {

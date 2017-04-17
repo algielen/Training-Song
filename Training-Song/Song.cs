@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Training_Songs
+namespace Training_Song
 {
     internal class Song : IItem
     {
@@ -9,9 +9,9 @@ namespace Training_Songs
         public string Name { get; set; }
         public Song(Guid idSong, string name, Artist artist)
         {
-            this.Id = idSong;
-            this.Name = name;
-            this.Artist = artist;
+            Id = idSong;
+            Name = name;
+            Artist = artist;
         }
 
         public override string ToString()

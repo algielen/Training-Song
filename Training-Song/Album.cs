@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Training_Songs
+namespace Training_Song
 {
     internal class Album : IItem, IEnumerable<Song>
     {
