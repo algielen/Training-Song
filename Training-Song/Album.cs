@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Training_Songs
 {
-    internal class Album : Item, IEnumerable<Song>
+    internal class Album : IItem, IEnumerable<Song>
     {
         public Guid Id { get; }
         public Artist Artist { get; }
@@ -14,16 +14,16 @@ namespace Training_Songs
 
         public Album(Guid idAlbum, Artist artist, string name, SortedList<int, Song> songs)
         {
-            this.Id = idAlbum;
-            this.Artist = artist;
-            this.Name = name;
-            this.Songs = songs;
+            Id = idAlbum;
+            Artist = artist;
+            Name = name;
+            Songs = songs;
         }
 
         public Song this[int index]
         {
-            get => this.Songs[index];
-            set => this.Songs[index] = value;
+            get => Songs[index];
+            set => Songs[index] = value;
         }
 
         public IEnumerator<Song> GetEnumerator()

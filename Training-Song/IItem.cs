@@ -2,7 +2,7 @@
 
 namespace Training_Songs
 {
-    internal interface Item
+    internal interface IItem
     {
         Guid Id { get; }
         Artist Artist { get; }

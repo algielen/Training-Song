@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Text;
 using Training_Songs;
 
 namespace Training_Song
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Artist germans = new Artist(Guid.NewGuid(), "Germans");
             Song cruel = new Song(Guid.NewGuid(), "Cruel", germans);
@@ -19,7 +18,7 @@ namespace Training_Song
             Console.WriteLine("Album : " + album);
 
             Console.WriteLine(album.ListSongs());
-            Library library = new Library(new SortedSet<Item>() { album });
+            Library library = new Library(new SortedSet<IItem>() { album });
             Console.WriteLine("Library : " + library.Items);
             Debugger.Break();
         }

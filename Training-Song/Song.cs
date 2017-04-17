@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Training_Songs
 {
-    internal class Song : Item
+    internal class Song : IItem
     {
         public Guid Id { get; }
         public Artist Artist { get; }

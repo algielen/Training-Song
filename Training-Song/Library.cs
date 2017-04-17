@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Training_Songs
 {
     internal class Library
     {
-        public SortedSet<Item> Items { get; }
+        public SortedSet<IItem> Items { get; }
 
-        public Library(SortedSet<Item> items)
+        public Library(SortedSet<IItem> items)
         {
             Items = items;
         }
 
-        public Library AddItem(Item item)
+        public Library AddItem(IItem item)
         {
             Items.Add(item);
             return this;
