@@ -12,5 +12,10 @@ namespace Training_Songs
             this.Id = id;
             this.Name = name;
         }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

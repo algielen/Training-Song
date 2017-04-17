@@ -17,5 +17,10 @@ namespace Training_Songs
             this.Name = name;
             this.Artist = artist;
         }
+
+        public override string ToString()
+        {
+            return Artist + " - " + Name;
+        }
     }
 }
