@@ -11,7 +11,7 @@ namespace Training_Song
         {
             Artist germans = new Artist(Guid.NewGuid(), "Germans");
             Song cruel = new Song(Guid.NewGuid(), "Cruel", germans);
-            Item album = new Album(Guid.NewGuid(), germans, new SortedSet<Song>() { cruel });
+            Item album = new Album(Guid.NewGuid(), germans, new List<Song>() { cruel });
             Console.WriteLine("Album : " + album);
             Library library = new Library(new SortedSet<Item>() { album });
             Console.WriteLine("Library : " + library.Items);
