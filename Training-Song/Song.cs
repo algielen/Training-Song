@@ -2,7 +2,7 @@
 
 namespace Training_Song
 {
-    internal class Song : IItem
+    internal class Song : INamedItem
     {
         public Guid Id { get; }
         public Artist Artist { get; }
@@ -17,6 +17,11 @@ namespace Training_Song
         public override string ToString()
         {
             return Artist + " - " + Name;
+        }
+
+        public void Play()
+        {
+            Console.WriteLine(this + " is now playing");
         }
     }
 }

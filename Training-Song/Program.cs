@@ -17,8 +17,9 @@ namespace Training_Song
             Console.WriteLine("Album : " + album);
 
             Console.WriteLine(album.ListSongs());
-            Library library = new Library(new SortedSet<IItem>() { album });
-            Console.WriteLine("Library : " + library.Items);
+            album.Play();
+            Library library = new Library(new SortedSet<INamedItem>() { album });
+            
             Debugger.Break();
         }
     }

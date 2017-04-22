@@ -4,20 +4,20 @@ namespace Training_Song
 {
     internal class Library
     {
-        public SortedSet<IItem> Items { get; }
+        public SortedSet<INamedItem> Items { get; }
 
-        public Library(SortedSet<IItem> items)
+        public Library(SortedSet<INamedItem> items)
         {
             Items = items;
         }
 
-        public Library AddItem(IItem item)
+        public Library AddItem(INamedItem item)
         {
             Items.Add(item);
             return this;
         }
 
-        public Library RemoveItem(IItem item)
+        public Library RemoveItem(INamedItem item)
         {
             Items.Remove(item);
             return this;

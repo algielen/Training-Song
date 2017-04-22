@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Training_Song
 {
-    internal class Album : IItem, IEnumerable<Song>
+    internal class Album : INamedItem, IEnumerable<Song>
     {
         public Guid Id { get; }
         public Artist Artist { get; }
@@ -39,6 +39,14 @@ namespace Training_Song
         public override string ToString()
         {
             return Artist + " - " + Name;
+        }
+
+        public void Play()
+        {
+            foreach (Song song in this)
+            {
+                song.Play();
+            }
         }
 
         public string ListSongs()
