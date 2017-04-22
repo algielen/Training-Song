@@ -17,6 +17,33 @@ namespace Training_Song
             Songs = songs;
         }
 
+        public Playlist AddSong(Song song)
+        {
+            Songs.Add(song);
+            return this;
+        }
+
+        public Playlist AddSongs(List<Song> songs)
+        {
+            Songs.AddRange(songs);
+            return this;
+        }
+
+        public Playlist RemoveSong(Song song)
+        {
+            Songs.Remove(song);
+            return this;
+        }
+
+        public Playlist RemoveSongs(List<Song> songs)
+        {
+            foreach (Song song in songs)
+            {
+                Songs.Remove(song);
+            }
+            return this;
+        }
+
         public void Play()
         {
             foreach (Song song in Songs)

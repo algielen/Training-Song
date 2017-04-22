@@ -10,7 +10,7 @@ namespace Training_Song
         public Guid Id { get; }
         public Artist Artist { get; }
         public string Name { get; set; }
-        public SortedList<int, Song> Songs { get; set; }
+        public SortedList<int, Song> Songs { get; set; } // the order of the songs must be strictly enforced
 
         public Album(Guid idAlbum, Artist artist, string name, SortedList<int, Song> songs)
         {
